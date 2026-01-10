@@ -60,7 +60,7 @@ install.bat
 
 3. **Run**:
 ```
-eyeson
+eyeson.bat
 ```
 
 ## Usage

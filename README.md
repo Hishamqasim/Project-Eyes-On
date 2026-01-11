@@ -13,12 +13,12 @@
 2.  **Deep Web Dorking**: Uses Google & Yahoo search dorks to find hidden cameras not listed in public directories.
 
 ## Features
--   **Unified Intelligence**: Access both scanning engines with a single `/scan` command.
--   **Anti-Blocking System**: automatically switches to **Yahoo Search** if Google blocks requests, ensuring zero downtime.
--   **Hyper-Speed**: Unlocked threads (100x workers) for instant parsing and verification.
--   **Zero-Wait**: Optimization algorithms remove artificial delays for maximum throughput.
+-   **Parallel Engine**: Queries **Yahoo** and **Startpage** simultaneously for maximum speed and results.
+-   **GeoIP Enrichment**: Automatically resolves camera IP locations to **City, Country** (e.g., "New York, United States").
+-   **Smart Deduplication**: Merges results from multiple engines to ensure unique feeds.
+-   **Direct Connection**: Optimized for speed without unreliable proxies.
 -   **Country Targeting**: Target specific regions (e.g., `/country US`, `/country RU`).
--   **Stealth Mode**: Emulates real browser traffic to bypass firewalls.
+-   **Live Verification**: Automatically detects stream types (MJPEG, JPEG, Video).
 
 ## Installation
 
@@ -26,7 +26,7 @@
 -   Python 3.x
 -   Pip
 
-### 🍎 macOS / 🐧 Linux
+### macOS / Linux
 1. **Clone the Repository**:
 ```
 git clone https://github.com/Y0oshi/Project-Eyes-On.git
@@ -45,7 +45,7 @@ sudo ./install.sh
 sudo eyeson
 ```
 
-### 🪟 Windows
+### Windows
 1. **Clone the Repository**:
 ```
 git clone https://github.com/Y0oshi/Project-Eyes-On.git
@@ -68,7 +68,8 @@ eyeson.bat
 ### Commands
 | Command | Description | Example |
 | :--- | :--- | :--- |
-| `/scan [Pages]` | Start Global Scan (Default 3 pages) | `/scan 50` |
+| `/scrape [Pages]` | Scrape Insecam (Public Directory) | `/scrape 5` |
+| `/scan [Pages]` | Google Dork Search (Deep Web) | `/scan 50` |
 | `/country [Code]` | Target Logic (e.g., US, JP, RU) | `/country US` |
 | `/mode [Type]` | Filter (ALL, STREAM, SNAPSHOT) | `/mode STREAM` |
 | `/exit` | Quit Tool | `/exit` |

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Eyes On - Installation Script
+# Eyes On - Installation Script (v3.0)
 # Made by Y0oshi
 
 if [ "$EUID" -ne 0 ]
@@ -8,19 +8,30 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-echo "[*] Installing Dependencies..."
-pip3 install -r requirements.txt
-
-echo "[*] Setting up 'eyeson' command..."
 # Get the absolute path of the current directory
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-TARGET_FILE="$DIR/eyes.py"
 
-# Make executable
-chmod +x "$TARGET_FILE"
+echo "[*] Creating Virtual Environment..."
+python3 -m venv "$DIR/venv"
+
+echo "[*] Installing Dependencies into venv..."
+"$DIR/venv/bin/pip" install --upgrade pip
+"$DIR/venv/bin/pip" install -r "$DIR/requirements.txt"
+
+echo "[*] Setting up 'eyeson' command..."
+
+# Create a wrapper script that uses the venv python
+WRAPPER="$DIR/eyeson_runner"
+cat <<EOF > "$WRAPPER"
+#!/bin/bash
+exec "$DIR/venv/bin/python3" "$DIR/eyes.py" "\$@"
+EOF
+
+chmod +x "$WRAPPER"
 
 # Create symlink in /usr/local/bin
-ln -sf "$TARGET_FILE" /usr/local/bin/eyeson
+ln -sf "$WRAPPER" /usr/local/bin/eyeson
 
 echo "[+] Installation Complete!"
+echo "[*] Virtual environment created in $DIR/venv"
 echo "[*] You can now run 'sudo eyeson' from anywhere."

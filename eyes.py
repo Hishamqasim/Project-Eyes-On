@@ -50,39 +50,295 @@ CAMERA_DORKS = [
     'inurl:axis-cgi/jpg',
     'inurl:axis-cgi/mjpg',
     'intitle:"AXIS 240 Camera Server"',
+    'intitle:"Live View / - AXIS 206M"',
+    'intitle:"Live View / - AXIS 210"',
+    'intitle:"Live View / - AXIS 211"',
+    'intitle:"Live View / - AXIS 213 PTZ"',
+    'intitle:"Live View / - AXIS 206W"',
+    'intitle:"Live View / - AXIS 210W"',
+    'inurl:indexFrame.shtml Axis',
+    'intitle:"Axis 2400 Video Server"',
+    'inurl:/view/indexFrame.shtml',
+    'intitle:"live view" intitle:axis',
+    'intitle:axis intitle:"video server"',
+    'tilt intitle:"Live View / - AXIS" | inurl:view/view.shtml',
+    'intitle:"AXIS 240 Camera Server" intext:"server push" -help',
+    'intitle:"Live View /- AXIS" |inurl:view/view.shtml OR inurl:view/indexFrame.shtml |intitle:"MJPG Live Demo" |intext:"Select preset position"',
+    'allintitle:Axis 2.10 OR 2.12 OR 2.30 OR 2.31 OR 2.32 OR 2.33 OR 2.34 OR 2.40 OR 2.42 OR 2.43 "Network Camera"',
+    'intitle:"Live View/ — AXIS"',
+    'intitle:"Live View/ — AX|S"',
+    'intitle:"Live View / - AXIS 706W"',
+    'AXIS Camera exploit',
     
     # Hikvision
     'intitle:"Hikvision Web Cameras"',
     'inurl:"/doc/page/login.asp" intext:"Hikvision"',
     'intitle:"Hikvision" inurl:"login.asp"',
+    'inurl:"/onvif-http/snapshot?auth="',
+    'product:"Hikvision IP Camera"',
     
     # Mobotix
     'inurl:"/cgi-bin/guestimage.html"',
     'inurl:"/control/faststream.jpg"',
     'intitle:"MOBOTIX" inurl:"/control/userimage.html"',
+    '(intitle:MOBOTIX intitle:PDAS) | (intitle:MOBOTIX intitle:Seiten)',
+    'inurl:/pda/index.html +camera',
     
     # Foscam
     'intitle:"Foscam" inurl:"login.htm"',
     'inurl:"/videostream.cgi?user="',
+    'intitle:"Foscam" inurl:"/live.htm"',
     
     # Panasonic
     'inurl:"/CgiStart?page=Single"',
     'intitle:"Panasonic Network Camera"',
     'inurl:"/nphMotionJpeg?Resolution="',
+    'inurl:/config/cam_portal.cgi "Panasonic"',
+    'inurl:"/ViewerFrame?Mode="',
+    'inurl:"/ViewerFrame?Mode=Motion"',
+    'intitle:"Panasonic" inurl:"ViewerFrame?Mode="',
+    'inurl:"MultiCameraFrame?Mode=Motion"',
+    'inurl:"WJ-NTI 04 Main Page"',
+    'inurl:/live.htm intext:"M-JPEG"|"System Log"|"Camera-1"|"View Control"',
     
     # D-Link
     'intitle:"D-Link" inurl:"/video.htm"',
     'inurl:"/mjpg/video.cgi" intitle:"D-Link"',
     'intitle:"D-Link DCS-"',
+    'inurl:"/eng/admin/adv_audiovideo.cgi"',
     
     # Sony
     'intitle:"sony network camera snc-pl"',
     'intitle:"Sony" inurl:"/home/homeJ.html"',
+    'intitle:"SNC-RZ30" -demo',
+    'intitle:"sony network camera snc-ml"',
+    'inurl:"/image/webcam.jpg" intitle:"Sony"',
+    'intitle:snc-220 inurl:home/',
+    'intitle:snc-cs3 inurl:home/',
+    'intitle:snc-r230 inurl:home/',
     
-    # Generic MJPEG streams
+    # Canon
+    'intitle:"Network Camera VB-M600"',
+    'inurl:"/sample/LvAppl/lvappl.htm"',
+    'inurl:"lvappl.htm"',
+    'inurl:"/view.shtml" "camera"',
+    
+    # Vivotek
+    'server:VVTK-HTTP-Server',
+    'inurl:"/cgi-bin/viewer/video.jpg"',
+    
+    # WebcamXP / Webcam 7
+    'intitle:"webcamXP 5"',
+    'intitle:"webcam 7"',
+    'intext:"powered by webcamXP 5"',
+    'inurl:"/cam_1.jpg" intitle:"webcamXP"',
+    'intitle:"webcam 7" inurl:"/gallery.html"',
+    'intitle:"webcamXP 5" -download',
+    'intitle:"webcam 7" inurl:"8080" -intext:"8080"',
+    'intitle:"webcamXP 5" inurl:8080 \'Live\'',
+    'intitle:"WEBCAM 7 " -inurl:/admin.html',
+    
+    # Dahua
+    'intitle:"Dahua IP Camera" inurl:/login',
+    'inurl:dahua inurl:view/view.shtml',
+    'intitle:"Dahua" inurl:"/cgi-bin/rpc.cgi?action=login"',
+    'intext:"Dahua" intitle:"Network Camera" inurl:main.cgi',
+
+    # Reolink
+    'intitle:"Reolink" inurl:view',
+    'intitle:"Reolink Camera" inurl:login',
+    'intitle:"Reolink" inurl:snapshot.cgi',
+    'intitle:"Reolink" inurl:/cgi-bin/',
+    'inurl:"/Reolink" intitle:"Live" -shop -store',
+
+    # Ubiquiti / UniFi
+    'intitle:"UniFi Video" inurl:login',
+    'intitle:"UniFi Protect" inurl:7443',
+    'inurl:snap.jpg intext:"ubiquiti"',
+    'intitle:"UniFi Protect" inurl:/protect/live',
+    'inurl:/cc/view.html intext:"unifi"',
+
+    # Blue Iris
+    'intitle:"Blue Iris Login"',
+    'intitle:"Blue Iris Remote View"',
+    
+    # Android IP Webcam
+    'inurl:"videomgr.html"',
+    'intitle:"Android IP Webcam"',
+    
+    # Generic CGI / Directory
+    'inurl:"/cgi-bin/live.cgi"',
+    'inurl:"/cgi-bin/stream.cgi"',
+    'inurl:"/cgi-bin/snapshot.cgi"',
+    'inurl:"/cgi-bin/camctrl.cgi"',
+    'intitle:"Index of /DCIM"',
+    'inurl:"logo.bmp" intitle:"Webcam"',
+    
+    # Broad / Catch-all
+    'intitle:"Live View" inurl:"login.cgi"',
+    'intitle:"IP Camera" inurl:"login.html"',
+    'inurl:"/view/index.shtml" -inurl:axis',
+    'inurl:"/view/view.shtml" -inurl:axis',
+    'inurl:"/main.cgi?next_file=main_fs.htm"',
+
+    # GeoVision
+    'intitle:"GeoVision WebCam Server" inurl:/WebCam',
+    'intitle:"GeoVision" inurl:/login.htm',
+    'inurl:/geovision/ login',
+    'intitle:"GeoVision MultiCam Surveillance System" live view',
+    'inurl:geovision filetype:txt "password"',
+
+    # Avigilon
+    'intitle:"Avigilon Control Center" inurl:/login',
+    'inurl:/avigilon/viewer',
+    'intitle:"Avigilon" intext:"live video"',
+    'inurl:/avigilon/webclient/',
+    
+    # Vivotek
+    'intitle:"Vivotek Camera" inurl:/viewer',
+    'intitle:"Vivotek" intext:"live view"',
+    'intitle:"Vivotek" inurl:/cgi-bin/',
+    'inurl:/vivotek/ rtsp',
+    
+    # ZoneMinder
+    'intitle:"ZoneMinder" inurl:/zm/index.php',
+    'intext:"ZoneMinder" inurl:view=event',
+    'inurl:/zoneminder/cgi-bin/nph-zms',
+    
+    # Legacy Webcam 7 / XP Ports
+    'intitle:"webcam 7" inurl::8080',
+    'intitle:"webcam 7" inurl::8081',
+    'intitle:"webcam 7" inurl::8000',
+    'intitle:"webcamXP 5" inurl::8080',
+    
+    # Shodan-Adapted / Misc
+    'product:"Hikvision IP Camera"',
+    'title:"IPCam Client"',
+    'http.title:"WEB VIEW" dahua',
+    'intitle:"Blue Iris Login"',
+    
+    # Toshiba
+    'intitle:"Toshiba Network Camera"',
+    'inurl:"/user/index.html" intitle:"Toshiba"',
+    'intitle:"Toshiba Network Camera" user Login',
+    
+    # Generic / Other
     'inurl:"/mjpg/video.mjpg"',
     'inurl:"/axis-cgi/mjpg"',
-    'intitle:"webcamXP- 5"',
+    'inurl:"view/index.shtml"',
+    'inurl:"/view/view.shtml"',
+    'inurl:"/c/version.cgi"',
+    'inurl:"/cgi-bin/mjpg/video.cgi"',
+    'inurl:"/cgi-bin/video.jpg"',
+    'inurl:"/live/index.html"',
+    'inurl:"/live/view.html"',
+    'inurl:"/mjpg/video.cgi?camera"',
+    'inurl:"/mjpg/video.cgi?channel"',
+    'inurl:"/nph-mjpeg.cgi"',
+    'inurl:"/out.jpg"',
+    'inurl:"/snapshot.cgi?"',
+    'inurl:"/stream/video.mjpeg"',
+    'inurl:"/video.cgi"',
+    'inurl:"/video.mjpg"',
+    'inurl:"/view/index.shtml" intitle:"Network Camera"',
+    'inurl:"CgiStart?page="',
+    'inurl:camctrl.cgi',
+    'intitle:"IP CAMERA Viewer"',
+    'intitle:"Live View / - AXIS"',
+    'intitle:"NetCam Live Image"',
+    'intitle:"WJ-HD150" inurl:"/login.html"',
+    'intitle:"WJ-ND200" inurl:"/login.html"',
+    'intitle:"i-Catcher Console - Web Monitor"',
+    'intitle:"netcam live image" (disconnected)',
+    'inurl:"/gallery.html" intitle:"IP Camera"',
+    'inurl:":8081" intitle:"IP Camera"',
+    'inurl:":8080" intitle:"IP Camera"',
+    'inurl:"/guestimage.html"',
+    'inurl:"/live.htm" intext:"M-JPEG"',
+    'inurl:"/monitor/bflowmo.jpg"',
+    'inurl:"/multiview.htm"',
+    'inurl:"/view.shtml" "Network Camera"',
+    'inurl:"/viewer/live.shtml"',
+    'inurl:"/webapp/live/show.html"',
+    'inurl:"/webcam.html"',
+    'inurl:"camera-cgi/admin/param.cgi"',
+    'inurl:"cgi-bin/guestimage.html"',
+    'inurl:"guestimage.html" intitle:"IP Camera"',
+    'inurl:"image.jpg" intitle:"IP Camera"',
+    'inurl:"index.html" intitle:"Live View / - AXIS"',
+    'inurl:"live/cam.html"',
+    'inurl:"live/mjpeg"',
+    'inurl:"mjpg/video.mjpg" intitle:"IP Camera"',
+    'inurl:"nphMotionJpeg?Resolution="',
+    'inurl:"snapshot.jpg"',
+    'inurl:"video.mjpg"',
+    'inurl:"view/index.shtml" intitle:"Axis"',
+    'inurl:"view/view.shtml" intitle:"Axis"',
+    'inurl:User/General_home.htm',
+    'inurl:ViewerFrame?M0de=',
+    'inurl:axis-cgi/mjpg (motion-JPEG)',
+    'inurl:indexFrame.shtml',
+    'inurl:live/cam.html',
+    'inurl:top.htm inurl:currenttime',
+    'inurl:view/indexFrame.shtml',
+    'inurl:view/viewer_index.shtml',
+    'intitle:"IP CAMERA Viewer" intext:"setting |Client setting"',
+    'intitle:"Device(" AND intext:"Network Camera" AND "language:" "AND "Password"',
+    'intitle:"yawcam" inurl:":8081"',
+    'intitle:"iGuard Fingerprint Security System"',
+    'intitle:"Edr1680 remote viewer"',
+    'intitle:"NetCam Live Image" -.edu -.gov -johnny.ihackstuff.com',
+    'intitle:"INTELLINET" intitle:"IP Camera Homepage"',
+    'intitle:"WEBDVR" -inurl:product -inurl:demo',
+    'intitle:"Middle frame of Videoconference Management System" ext:htm',
+    'intitle:"--- VIDEO WEB SERVER ---" intext:"Video Web Server" "Any time & Any where" username password',
+    'intitle:HomeSeer.Web.Control | Home.Status.Events.Log',
+    'intitle:"supervisioncam protocol"',
+    'intitle:"active webcam page"',
+    'VB Viewer inurl:/viewer/live/ja/live.html',
+    'inurl:control/camerainfo',
+    'inurl:"/view/view.shtml?id="',
+    'allintitle:Edr1680 remote viewer',
+    'allintitle:EverFocus |EDSR |EDSR400 Applet',
+    'allintitle:EDR1600 login |Welcome',
+    'intitle:"BlueNet Video Viewer"',
+    '(intitle:(EyeSpyFX|OptiCamFX) "go to camera")|(inurl:servlet/DetectBrowser)',
+    'intitle:"Veo Observer XT"',
+    'inurl:shtml|pl|php|htm|asp|aspx|pDf|cfm -(intext:observer)',
+    'inurl:"/view.shtml"',
+    'inurl:"ViewerFrame?M0de=Refresh"',
+    'liveapplet',
+    'intitle:liveapplet',
+    'allintitle:"Network Camera NetworkCamera" (disconnected)',
+    'intitle:liveapplet inurl:LvAppl',
+    'intitle:"EvoCam" inurl:"webcam.html"',
+    'intitle:"Live NetSnap Cam-Server feed"',
+    'intitle:start inurl:cgistart',
+    'site:.viewnetcam.com -www.viewnetcam.com',
+    'intitle:"IP Webcam" inurl:"/greet.html"',
+    'intitle:"NetCamSC*"',
+    'intitle:"NetCamXL*"',
+    'intitle:"NetCamSC*" | intitle:"NetCamXL*" inurl:index.html',
+    '"Camera Live Image" inurl:"guestimage.html"',
+    'intitle:"webcam" inurl:login',
+    'inurl:/ViewerFrame? intitle:"Network Camera NetworkCamera"',
+    'intitle:NetworkCamera intext:"Pan / Tilt" inurl:ViewerFrame',
+    'intitle:"IP CAMERA Viewer" intext:"setting | Client setting"',
+    'intitle:"Weather Wing WS-2"',
+    
+    # Linksys
+    'intitle:"Linksys Viewer - Login" -inurl:mainFrame',
+    'inurl:"main.cgi?next_file=main_fs.htm"',
+    
+    # TP-Link
+    'intitle:"TP-LINK IP-Camera"',
+    
+    # Other / Generic Additions
+    'intitle:"netcam watcher"',
+    'intitle:"Network Camera NetworkCamera"',
+    'intitle:"Webcam" inurl:WebCam.htm',
+    'intitle:webcamxp inurl:8080',
+    'inurl:"snapshot.cgi?user="',
 ]
 
 BANNER = """
@@ -430,6 +686,7 @@ def print_banner():
 
 def run_scan(country=None, pages=3, mode='DORK'):
     """Execute a scan operation."""
+    import threading
     global FOUND_CAMS
     
     insecam = InsecamScraper()
@@ -449,9 +706,19 @@ def run_scan(country=None, pages=3, mode='DORK'):
         result = verifier.verify(camera)
         if result:
             color = Fore.GREEN if 'STREAM' in result['type'] else Fore.CYAN
-            print(f"{color}[+] {Fore.WHITE}{result['url']} {Fore.MAGENTA}({result['brand']} | {result['location']})")
+            # Use \r to overwrite spinner line
+            print(f"\r{color}[+] {Fore.WHITE}{result['url']} {Fore.MAGENTA}({result['brand']} | {result['location']})")
             FOUND_CAMS.append(result)
     
+    stop_spinner = False
+    def spinner():
+        while not stop_spinner:
+            for dots in ['.  ', '.. ', '...']:
+                if stop_spinner: break
+                sys.stdout.write(f"\r{Fore.YELLOW}[*] Still searching{dots}{Style.RESET_ALL}   ")
+                sys.stdout.flush()
+                time.sleep(0.5)
+
     with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
         # Insecam scraping
         if mode in ['UNIFIED', 'INSECAM']:
@@ -460,9 +727,16 @@ def run_scan(country=None, pages=3, mode='DORK'):
         
         # Dorking
         if mode in ['UNIFIED', 'DORK']:
-            for camera in dorker.scan(limit=pages * 10):
-                executor.submit(verify_and_print, camera)
-    
+            t = threading.Thread(target=spinner)
+            t.start()
+            try:
+                for camera in dorker.scan(limit=pages * 10):
+                    executor.submit(verify_and_print, camera)
+            finally:
+                stop_spinner = True
+                t.join()
+                sys.stdout.write('\r' + ' ' * 50 + '\r') # Clear spinner line
+
     print(f"\n{Fore.CYAN}[*] Scan complete. Found {len(FOUND_CAMS)} live cameras.")
     
     # Save results

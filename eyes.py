@@ -418,8 +418,12 @@ class InsecamScraper:
                     src = img.get('src', '')
                     title = img.get('title', '')
                     
-                    # Skip static assets
-                    if 'http' in src and 'static' not in src and 'insecam' not in src:
+                    # Junk domains to ignore
+                    junk_terms = ['static', 'insecam', 'yandex', 'google', 'facebook', 'twitter', 
+                                 'instagram', 'tiktok', 'analytics', 'doubleclick', 'counter']
+                    
+                    # Skip static assets and junk
+                    if 'http' in src and not any(term in src.lower() for term in junk_terms):
                         brand, location = self._parse_title(title)
                         cameras.append({
                             'url': src,
@@ -786,10 +790,12 @@ def main():
                 if len(parts) > 1:
                     code = parts[1].upper()
                     if code in COUNTRIES:
-                        target_country = code
-                        print(f"{Fore.GREEN}[+] Target: {code} ({COUNTRIES[code]})")
+                        print(f"{Fore.GREEN}[+] Target set to {code} ({COUNTRIES[code]})")
+                        run_scan(country=code, pages=3, mode='INSECAM')
                     else:
                         print(f"{Fore.RED}[-] Invalid country code")
+                else:
+                    print(f"{Fore.YELLOW}[*] Usage: /country [CODE] (e.g. US, JP, RU)")
             
             elif command == '/mode':
                 if len(parts) > 1:

